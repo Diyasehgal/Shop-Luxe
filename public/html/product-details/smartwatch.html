@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartwatch Details - ShopLuxe</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/product-details.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-store"></i> ShopLuxe</div>
+            <ul class="nav-links">
+                <li><a href="../../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                <li><a href="../wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+                <li><a href="../cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="../login.html"><i class="fas fa-user"></i> Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <!-- Back to Products Button -->
+ <div class="back-button">
+    <a id="back-to-products">&#8592; Back</a>
+</div>
+
+    <main>
+        <div class="product-details">
+            <!-- Product Image -->
+            <div class="product-image">
+                <img src="../../images/smartwatch.webp" alt="Smartwatch">
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <h1>Smartwatch</h1>
+                <p class="price">$150</p>
+                <p class="description">
+                    Stay connected and track your health with this stylish and powerful smartwatch. Perfect for fitness enthusiasts and professionals alike.
+                </p>
+                <ul class="specs">
+                    <li><strong>Display:</strong> 1.5-inch AMOLED Touchscreen</li>
+                    <li><strong>Battery Life:</strong> Up to 7 days</li>
+                    <li><strong>Features:</strong> Heart Rate Monitoring, Sleep Tracking, GPS</li>
+                    <li><strong>Compatibility:</strong> iOS & Android</li>
+                    <li><strong>Water Resistance:</strong> 5 ATM</li>
+                </ul>
+                <div class="actions">
+                    <button class="btn add-to-cart">Add to Cart</button>
+                    <button class="btn add-to-wishlist">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Reviews -->
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <p><strong>Michael Scott:</strong> Excellent battery life and accurate health tracking. A must-have gadget!</p>
+            </div>
+            <div class="review">
+                <p><strong>Pam Beesly:</strong> Very stylish and user-friendly. I love the sleep tracking feature!</p>
+            </div>
+            <form class="add-review">
+                <h3>Add Your Review</h3>
+                <textarea placeholder="Write your review..." required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ShopLuxe. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Include the external JavaScript file -->
+<script src="../../js/product-details.js"></script>
+
+</body>
+</html>

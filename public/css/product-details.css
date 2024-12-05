@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f7f9fc;
+}
+
+/* Header */
+header {
+    background: #1a1a2e; /* Clean, professional dark blue */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    color: #00aaff; /* Light blue for brand identity */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+header .nav-links li {
+    margin-left: 1.5rem;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: flex; /* Aligns icon and text horizontally */
+    align-items: center; /* Centers icon and text */
+    gap: 0.5rem; /* Adds space between icon and text */
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+}
+
+header .nav-links a i {
+    font-size: 1.2rem; /* Icon size */
+    color: #00aaff; /* Matches the logo's accent color */
+}
+
+header .nav-links a:hover {
+    background: #00aaff; /* Highlight with brand's accent color */
+    color: white; /* Ensures good contrast */
+    transform: scale(1.1); /* Subtle scaling */
+}
+
+header .nav-links a:hover i {
+    color: white; /* Change icon color on hover */
+}
+
+.back-button {
+    margin: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: #4facfe; /* Matches the site's theme */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.back-button a:hover {
+    color: #00aaff;
+    transform: translateX(-5px); /* Slight animation for hover */
+}
+
+/* Main Section */
+.product-details {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    background: white;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    width: 100%; /* Ensures the image scales responsively */
+    max-width: 400px; /* Limits the maximum width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Keeps consistent styling */
+    display: block; /* Prevents inline spacing issues */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.product-info {
+    flex: 1;
+    text-align: left;
+}
+
+.product-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a2e;
+}
+
+.product-info .price {
+    font-size: 1.5rem;
+    color: #00aaff;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.product-info .description {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.product-info .specs {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.product-info .specs li {
+    margin-bottom: 0.5rem;
+    color: #777;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    background: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #00aaff;
+    transform: scale(1.05);
+}
+
+/* Reviews Section */
+.reviews {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 1rem 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reviews h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1a1a2e;
+}
+
+.review {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    color: #555;
+}
+
+.add-review h3 {
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+}
+
+.add-review textarea {
+    width: 100%;
+    height: 100px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    resize: none;
+}
+
+.add-review button {
+    background: #4facfe;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.add-review button:hover {
+    background: #00aaff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #1a1a2e;
+    color: white;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer a {
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #00aaff;
+    text-decoration: underline;
+}
