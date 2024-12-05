@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    display: flex;
+    background: linear-gradient(135deg, #f7faff, #eef2f3); /* Subtle gradient background */
+    flex-direction: column; /* Enable column layout for footer adjustment */
+}
+
+main {
+    flex: 1; /* Push footer to the bottom */
+}
+
+
+/* Header */
+header {
+    background: #1a1a2e; /* Clean, professional dark blue */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    color: #00aaff; /* Light blue for brand identity */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+header .nav-links li {
+    margin-left: 1.5rem;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: flex; /* Aligns icon and text horizontally */
+    align-items: center; /* Centers icon and text */
+    gap: 0.5rem; /* Adds space between icon and text */
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+}
+
+header .nav-links a i {
+    font-size: 1.2rem; /* Icon size */
+    color: #00aaff; /* Matches the logo's accent color */
+}
+
+header .nav-links a:hover {
+    background: #00aaff; /* Highlight with brand's accent color */
+    color: white; /* Ensures good contrast */
+    transform: scale(1.1); /* Subtle scaling */
+}
+
+header .nav-links a:hover i {
+    color: white; /* Change icon color on hover */
+}
+/* Main Section */
+main {
+    padding: 2rem 2rem 1rem; /* Reduced bottom padding */
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.8rem; /* Increased font size for heading */
+    margin-bottom: 2rem;
+}
+
+/* Filter and Sort */
+.filter-sort {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.filter-sort select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.filter-sort select:focus {
+    border-color: #00aaff;
+}
+
+/* Products Grid */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Reduced gap between products */
+    justify-content: center;
+    padding-bottom: 1rem; /* Reduced bottom padding */
+}
+
+.product-card {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 150px; /* Uniform width */
+    height: 150px; /* Uniform height */
+    object-fit: contain; /* Ensure proportional scaling */
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-card h2 {
+    font-size: 1.4rem; /* Increased font size for product title */
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.product-card p {
+    color: #777;
+    font-size: 1.1rem; /* Increased font size for price */
+    margin-bottom: 1rem;
+}
+
+.product-card .btn {
+    text-decoration: none;
+    background: #4facfe;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem; /* Increased button font size */
+    transition: background 0.3s, transform 0.3s;
+}
+
+.product-card .btn:hover {
+    background: #00aaff;
+    transform: scale(1.1);
+}
+
+/* Category Buttons */
+.categories {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.category-btn {
+    border: 2px solid #ddd;
+    background: linear-gradient(135deg, #ffffff, #f0f4f8); /* Subtle gradient */
+    color: #333;
+    padding: 0.6rem 1.2rem; /* Slightly larger padding */
+    margin: 0 0.5rem;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle depth */
+}
+
+.category-btn:hover {
+    background: linear-gradient(135deg, #f9fcff, #eaf2f8); /* Softer hover gradient */
+    color: #0078d7; /* Highlighted text color */
+    border-color: #0078d7; /* Border changes on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+.category-btn.active {
+    background: #4facfe;
+    color: white;
+    border-color: #4facfe;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Makes the active button prominent */
+}
+/* Product Categories */
+.product-category {
+    display: none;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-category.active {
+    display: flex;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #1a1a2e;
+    color: white;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 0; /* Ensure no top margin */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Optional border for design */
+}
+
+footer a {
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #00aaff;
+    text-decoration: underline;
+}
