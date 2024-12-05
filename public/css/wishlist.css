@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f7f9fc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background: #1a1a2e;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    color: #00aaff;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+header .nav-links li {
+    margin-left: 1.5rem;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+}
+
+header .nav-links a.active {
+    background: #00aaff;
+}
+
+header .nav-links a:hover {
+    background: #00aaff;
+    transform: scale(1.1);
+}
+
+/* Main Section */
+main {
+    padding: 2rem;
+    text-align: center;
+    flex: 1; /* Ensures footer sticks to the bottom */
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Wishlist Grid */
+.wishlist-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.wishlist-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 260px; /* Ensure all cards have consistent width */
+    height: 420px; /* Increase height to avoid cropping */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.wishlist-item img {
+    width: 100%;
+    height: 240px; /* Increased height for proper image display */
+    object-fit: contain; /* Ensures the image fits without cropping */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.wishlist-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.wishlist-item p {
+    margin-bottom: 1rem;
+    color: #777;
+}
+
+.wishlist-item .actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn {
+    background: #4facfe;
+    color: white;
+}
+
+.btn.remove {
+    background: #ff6f61;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: #00aaff;
+}
+
+.btn.remove:hover {
+    background: #e9594d;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #1a1a2e;
+    color: white;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .wishlist-grid {
+        flex-direction: column;
+    }
+}
