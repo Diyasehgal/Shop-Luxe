@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensures the body and html take full height */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Flex layout for the page */
+}
+
+/* Header */
+header {
+    background: #1a1a2e; /* Clean, professional dark blue */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    color: #00aaff; /* Light blue for brand identity */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+header .nav-links li {
+    margin-left: 1.5rem;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: flex; /* Aligns icon and text horizontally */
+    align-items: center; /* Centers icon and text */
+    gap: 0.5rem; /* Adds space between icon and text */
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+}
+
+header .nav-links a i {
+    font-size: 1.2rem; /* Icon size */
+    color: #00aaff; /* Matches the logo's accent color */
+}
+
+header .nav-links a:hover {
+    background: #00aaff; /* Highlight with brand's accent color */
+    color: white; /* Ensures good contrast */
+    transform: scale(1.1);
+}
+
+header .nav-links a:hover i {
+    color: white; /* Change icon color on hover */
+}
+
+/* Main Content */
+main {
+    flex-grow: 1; /* Takes up all remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #fff;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+main h1 {
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+}
+
+main p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+main p span {
+    font-weight: bold;
+    color: #333;
+}
+
+.order {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order h2 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.order p {
+    margin: 0.3rem 0;
+    color: #555;
+}
+
+.order ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+
+.order ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.order ul li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}

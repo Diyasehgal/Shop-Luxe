@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,14 +8,13 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
-    background: linear-gradient(135deg, #4facfe, #00f2fe); /* Matches the login and homepage theme */
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
 
-/* Container */
 .register-container {
     width: 90%;
     max-width: 500px;
@@ -32,39 +32,51 @@ body {
     font-weight: 600;
 }
 
-/* Form */
 form {
     width: 100%;
     text-align: left;
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #555;
-}
-
-.form-group input {
+form input {
     width: 100%;
     padding: 0.8rem;
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     outline: none;
+    margin-bottom: 1rem;
     transition: border-color 0.3s;
 }
 
-.form-group input:focus {
+form input:focus {
     border-color: #4facfe;
 }
 
-.btn {
+/* Password Field Wrapper */
+.password-field {
+    position: relative; /* Enables positioning of the toggle icon */
+}
+
+.password-field input {
+    padding-right: 2.5rem; /* Adds space for the toggle icon */
+}
+
+.password-field .toggle-password {
+    position: absolute;
+    right: 10px; /* Aligns the icon inside the input */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem; /* Adjust the size of the icon */
+    color: #777;
+    transition: color 0.3s;
+}
+
+.password-field .toggle-password:hover {
+    color: #4facfe; /* Changes color on hover */
+}
+
+form button {
     width: 100%;
     padding: 0.8rem;
     background: #4facfe;
@@ -77,12 +89,11 @@ form {
     transition: background 0.3s, transform 0.3s;
 }
 
-.btn:hover {
+form button:hover {
     background: #00f2fe;
     transform: scale(1.05);
 }
 
-/* Back to Home */
 .back-home {
     position: absolute;
     top: 15px;
@@ -93,12 +104,12 @@ form {
 
 .back-home a {
     text-decoration: none;
-    color: white; /* Use white for better contrast */
+    color: white;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background: #4facfe; /* Background for better visibility */
+    background: #4facfe;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: background 0.3s ease-in-out, color 0.3s;
@@ -106,11 +117,10 @@ form {
 }
 
 .back-home a:hover {
-    background: #00aaff; /* Slightly darker on hover */
+    background: #00aaff;
     color: white;
 }
 
-/* Bottom Link */
 .register-container p {
     margin-top: 1rem;
     font-size: 0.9rem;
@@ -126,20 +136,4 @@ form {
 
 .register-container a:hover {
     color: #00f2fe;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .register-container {
-        padding: 1.5rem;
-    }
-
-    .register-container h1 {
-        font-size: 1.8rem;
-    }
-
-    .form-group input {
-        padding: 0.7rem;
-        font-size: 0.9rem;
-    }
 }

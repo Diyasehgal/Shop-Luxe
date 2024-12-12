@@ -50,4 +50,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
         });
     }
+
+ // Add to Wishlist Button Logic
+ const addToWishlistButton = document.querySelector(".add-to-wishlist");
+ if (addToWishlistButton) {
+     addToWishlistButton.addEventListener("click", () => {
+         // Send a POST request to add the product to the wishlist
+         fetch("/auth/wishlist/add", {
+             method: "POST",
+             headers: {
+                 "Content-Type": "application/json",
+             },
+             body: JSON.stringify({ productId }), // Pass the productId in the body
+         })
+             .then((response) => {
+                 if (response.ok) {
+                     alert("Product added to wishlist successfully!");
+                 } else {
+                     return response.json().then((data) => {
+                         throw new Error(data.error || "Failed to add product to wishlist.");
+                     });
+                 }
+             })
+             .catch((error) => {
+                 alert(`Error: ${error.message}`);
+             });
+     });
+ }
 });

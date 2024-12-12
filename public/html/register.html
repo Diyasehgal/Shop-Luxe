@@ -7,6 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/register.css">
+    <script src="../js/password.js"></script>
 </head>
 <body>
     <!-- Back to Home -->
@@ -18,7 +19,10 @@
             <h1>Create an Account</h1>
             <form action="http://localhost:3000/auth/register" method="post">
                 <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
+                <div class="password-field">
+                    <input type="password" name="password" placeholder="Password" required>
+                    <span class="toggle-password">👁️</span>
+                </div>
                 <button type="submit">Register</button>
             </form>
             <p>Already have an account? <a href="login.html">Login here</a></p>

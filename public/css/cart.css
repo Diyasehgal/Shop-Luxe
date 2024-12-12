@@ -22,10 +22,10 @@ main {
 
 /* Header */
 header {
-    background: #1a1a2e;
+    background: #1a1a2e; /* Clean, professional dark blue */
     color: white;
     padding: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth */
     position: sticky;
     top: 0;
     z-index: 10;
@@ -35,7 +35,10 @@ header .logo {
     font-size: 2rem;
     font-weight: bold;
     margin-left: 2rem;
-    color: #00aaff;
+    color: #00aaff; /* Light blue for brand identity */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 header .nav-links {
@@ -55,18 +58,27 @@ header .nav-links a {
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    display: flex; /* Aligns icon and text horizontally */
+    align-items: center; /* Centers icon and text */
+    gap: 0.5rem; /* Adds space between icon and text */
     transition: background 0.3s, transform 0.3s, color 0.3s;
 }
 
-header .nav-links a.active {
-    background: #00aaff;
-    color: white;
+header .nav-links a i {
+    font-size: 1.2rem; /* Icon size */
+    color: #00aaff; /* Matches the logo's accent color */
 }
 
 header .nav-links a:hover {
-    background: #00aaff;
+    background: #00aaff; /* Highlight with brand's accent color */
+    color: white; /* Ensures good contrast */
     transform: scale(1.1);
 }
+
+header .nav-links a:hover i {
+    color: white; /* Change icon color on hover */
+}
+
 
 /* Main Section */
 main {

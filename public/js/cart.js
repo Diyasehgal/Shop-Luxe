@@ -52,14 +52,14 @@ function renderCart(cartItems) {
     let totalItemsCount = 0;
 
     cartItems.forEach((item) => {
-        const imagePath = `../images/${item.name.toLowerCase()}.webp`;
+        const imagePath = item.image_url; // Use the image URL directly from the backend
         const itemTotal = item.price * item.quantity;
         total += itemTotal;
         totalItemsCount += item.quantity;
 
         cartItemsContainer.innerHTML += `
             <div class="cart-item">
-                <img src="../images/${item.name.toLowerCase()}.webp" alt="${item.name}">
+                <img src="${imagePath}" alt="${item.name}">
                 <div class="item-details">
                     <h2>${item.name}</h2>
                     <p>Price: $${item.price}</p>
