@@ -15,23 +15,33 @@ body {
 }
 
 /* Back to Home */
+/* Back to Home Button */
 .back-home {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px; /* Aligns the button properly */
+    left: 20px;
     z-index: 10;
     font-size: 1rem;
+    background-color: transparent; /* Transparent background for clean integration */
+    padding: 0; /* Remove unnecessary padding */
 }
 
 .back-home a {
-    text-decoration: none;
-    color: #4facfe;
+    display: inline-block; /* Makes it a properly sized link */
+    text-decoration: none; /* Removes the underline */
+    color: #4facfe; /* Button color */
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    padding: 8px 16px; /* Adds padding to the link for better clickability */
+    border: 2px solid #4facfe; /* Adds a border for clear visibility */
+    border-radius: 5px; /* Slightly rounded corners */
+    background-color: #ffffff; /* White background for contrast */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
 }
 
 .back-home a:hover {
-    color: #00aaff;
+    background-color: #4facfe; /* Changes background color on hover */
+    color: #ffffff; /* Switch text color on hover */
+    transform: scale(1.05); /* Slight zoom for interactivity */
 }
 
 /* Login Container */
