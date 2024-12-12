@@ -1,0 +1,50 @@
+sqlite3 database.sqlite
+.mode column
+.headers on
+.tables
+
+// Show All Users
+SELECT * FROM users;
+
+// Show All Products
+SELECT * FROM products;
+
+// Show Cart Items for a User
+SELECT cart.id AS cart_id, users.email, products.name AS product_name, cart.quantity
+FROM cart
+JOIN users ON cart.user_id = users.id
+JOIN products ON cart.product_id = products.id
+WHERE cart.user_id = 1;
+
+// Show Wishlist for a User
+SELECT wishlist.id AS wishlist_id, users.email, products.name AS product_name, products.price
+FROM wishlist
+JOIN users ON wishlist.user_id = users.id
+JOIN products ON wishlist.product_id = products.id
+WHERE wishlist.user_id = 1; 
+
+// Show Order for a User
+SELECT * FROM orders WHERE user_id = 1; 
+
+// Show Items in an Order
+SELECT order_items.id AS order_item_id, products.name AS product_name, order_items.quantity, order_items.price
+FROM order_items
+JOIN products ON order_items.product_id = products.id
+WHERE order_items.order_id = 1;
+
+// Show User’s Complete Interaction
+SELECT 'Cart' AS interaction_type, products.name, cart.quantity
+FROM cart
+JOIN products ON cart.product_id = products.id
+WHERE cart.user_id = 1
+UNION ALL
+SELECT 'Wishlist', products.name, 0
+FROM wishlist
+JOIN products ON wishlist.product_id = products.id
+WHERE wishlist.user_id = 1
+UNION ALL
+SELECT 'Order', products.name, order_items.quantity
+FROM order_items
+JOIN products ON order_items.product_id = products.id
+JOIN orders ON order_items.order_id = orders.id
+WHERE orders.user_id = 1;
