@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const backButton = document.getElementById("back-to-products");
     if (backButton) {
         if (origin === "cart") {
-            backButton.href = "/html/cart.html"; // Redirect back to cart
+            backButton.href = "/public/html/cart.html"; // Redirect back to cart
         } else if (origin === "home") {
             backButton.href = "/"; // Redirect back to home
         } else {
-            backButton.href = `/html/products.html?category=${category}`; // Default to products page
+            backButton.href = `/public/html/products.html?category=${category}`; // Default to products page
         }
     }
 

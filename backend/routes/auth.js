@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const db = require('../dbConfig');
+const db = require('/backend/dbConfig');
 
 const router = express.Router();
 const SECRET_KEY = 'your-secret-key';
@@ -22,7 +22,7 @@ router.post('/register', (req, res) => {
                 return res.status(500).json({ error: 'Error registering user' });
             }
             // Redirect to login page after successful registration
-            res.redirect('/html/login.html');
+            res.redirect('/public/html/login.html');
         });
     });
 });
@@ -119,7 +119,7 @@ router.get('/cart', (req, res) => {
         const userId = decoded.id;
         const sql = `
         SELECT products.id, products.name, products.price,
-               ('../../images/' || products.image) AS image_url,
+               ('/public/images/' || products.image) AS image_url,
                cart.quantity
         FROM cart
         JOIN products ON cart.product_id = products.id
@@ -226,7 +226,7 @@ router.get('/wishlist', (req, res) => {
 
         const userId = decoded.id;
         const sql = `
-            SELECT products.id, products.name, products.price, ('../../images/' || products.image) AS image_url
+            SELECT products.id, products.name, products.price, ('/public/images/' || products.image) AS image_url
             FROM wishlist
             JOIN products ON wishlist.product_id = products.id
             WHERE wishlist.user_id = ?
@@ -372,7 +372,7 @@ router.get('/orders', (req, res) => {
 
             // Fetch order items for each order
             const orderItemsSql = `
-                SELECT order_items.*, products.name, ('../../images/' || products.image) AS image_url
+                SELECT order_items.*, products.name, ('/public/images/' || products.image) AS image_url
                 FROM order_items
                 JOIN products ON order_items.product_id = products.id
                 WHERE order_items.order_id = ?

@@ -86,7 +86,7 @@ function handleCheckout(event) {
         })
         .then((data) => {
             alert('Order placed successfully! Redirecting to confirmation page...');
-            window.location.href = `/html/confirmation.html?orderId=${data.orderId}`;
+            window.location.href = `/public/html/confirmation.html?orderId=${data.orderId}`;
         })
         .catch((error) => {
             console.error('Checkout error:', error);
@@ -129,7 +129,7 @@ function handleCheckout(event) {
         })
         .then((data) => {
             alert('Order placed successfully! Redirecting to confirmation page...');
-            window.location.href = `/html/confirmation.html?orderId=${data.orderId}`;
+            window.location.href = `/public/html/confirmation.html?orderId=${data.orderId}`;
         })
         .catch((error) => {
             console.error('Checkout error:', error);

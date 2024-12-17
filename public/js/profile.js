@@ -37,7 +37,7 @@ async function fetchUserProfile() {
 
         if (!tokenCookie) {
             console.error('No token found. User not logged in.');
-            window.location.href = '/html/login.html';
+            window.location.href = '/public/html/login.html';
             return;
         }
 
@@ -60,7 +60,7 @@ async function fetchUserProfile() {
     } catch (error) {
         console.error(error.message);
         alert('Failed to load profile data. Please log in again.');
-        window.location.href = '/html/login.html'; // Redirect to login
+        window.location.href = '/public/html/login.html'; // Redirect to login
     }
 }
 
@@ -74,7 +74,7 @@ async function fetchUserOrders() {
 
         if (!tokenCookie) {
             console.error('No token found. User not logged in.');
-            window.location.href = '/html/login.html';
+            window.location.href = '/public/html/login.html';
             return;
         }
 

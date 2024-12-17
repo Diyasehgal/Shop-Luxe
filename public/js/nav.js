@@ -18,12 +18,12 @@ function updateAuthLink() {
     if (isLoggedIn()) {
         console.log('User is logged in. Updating link to Profile.'); // Debugging
         authLink.innerHTML = `
-            <a href="/html/profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="/public/html/profile.html"><i class="fas fa-user"></i> Profile</a>
         `;
     } else {
         console.log('User is not logged in. Showing Login/Register.'); // Debugging
         authLink.innerHTML = `
-            <a href="/html/login.html"><i class="fas fa-user"></i> Login/Register</a>
+            <a href="/public/html/login.html"><i class="fas fa-user"></i> Login/Register</a>
         `;
     }
 }
