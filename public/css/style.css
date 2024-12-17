@@ -245,6 +245,42 @@ header .nav-links a:hover i {
     margin-bottom: 0.5rem;
 }
 
+/* Why Choose Us */
+.why-choose-us {
+    padding: 3rem;
+    background: #fff;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.feature {
+    text-align: center;
+    max-width: 200px;
+}
+
+.feature img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
 /* Footer */
 footer {
     text-align: center;

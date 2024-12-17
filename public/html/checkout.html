@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ShopLuxe</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-store"></i> ShopLuxe</div>
+            <ul class="nav-links">
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/html/cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <h1>Checkout</h1>
+
+        <!-- Order Summary -->
+        <section class="order-summary">
+            <h2>Your Order</h2>
+            <div class="items-container">
+                <!-- Dynamically Loaded Items -->
+            </div>
+            <div class="summary">
+                <p><strong>Total Items:</strong> <span id="total-items">0</span></p>
+                <p><strong>Total Price:</strong> <span id="total-price">$0</span></p>
+            </div>
+        </section>
+
+        <!-- Shipping Details -->
+        <section class="shipping-details">
+            <h2>Shipping Details</h2>
+            <form id="checkout-form">
+                <input type="text" name="fullName" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="address" placeholder="Address" required>
+                <input type="text" name="city" placeholder="City" required>
+                <input type="text" name="state" placeholder="State" required>
+                <input type="text" name="zip" placeholder="ZIP Code" required>
+                <button type="submit">Proceed to Payment</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ShopLuxe. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/checkout.js" defer></script>
+</body>
+</html>

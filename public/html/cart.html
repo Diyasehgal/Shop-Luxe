@@ -14,11 +14,11 @@
         <nav>
             <div class="logo"><i class="fas fa-store"></i> ShopLuxe</div>
             <ul class="nav-links">
-                <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
                 <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
                 <li><a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i> Cart</a></li>
-                <li><a href="login.html"><i class="fas fa-user"></i> Login/Register</a></li>
+                <li id="auth-link"><a href="login.html"><i class="fas fa-user"></i> Login/Register</a></li>
             </ul>
         </nav>
     </header>
@@ -29,76 +29,27 @@
 
         <div class="cart-container">
             <!-- Cart Items -->
-            <div class="cart-items">
-                <!-- Example Item -->
-                <div class="cart-item">
-                    <img src="../images/laptop.webp" alt="Laptop">
-                    <div class="item-details">
-                        <h2>Laptop</h2>
-                        <p>Price: $1000</p>
-                        <div class="quantity">
-                            <label for="quantity">Quantity:</label>
-                            <input type="number" id="quantity" value="1" min="1">
-                        </div>
-                        <p class="item-total">Total: $1000</p>
-                    </div>
-                    <button class="btn remove-btn">Remove</button>
-                </div>
-                <div class="cart-item">
-                    <img src="../images/Headphones.webp" alt="Headphones">
-                    <div class="item-details">
-                        <h2>Headphones</h2>
-                        <p>Price: $300</p>
-                        <div class="quantity">
-                            <label for="quantity">Quantity:</label>
-                            <input type="number" id="quantity" value="1" min="1">
-                        </div>
-                        <p class="item-total">Total: $300</p>
-                    </div>
-                    <button class="btn remove-btn">Remove</button>
-                </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Items will be dynamically inserted here -->
             </div>
 
             <!-- Cart Summary -->
             <div class="cart-summary">
                 <h2>Summary</h2>
-                <p>Total Items: <span id="total-items">2</span></p>
-                <p>Total Price: <span id="total-price">$1300</span></p>
+                <p>Total Items: <span id="total-items">0</span></p>
+                <p>Total Price: <span id="total-price">$0</span></p>
                 <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
             </div>
         </div>
     </main>
-
-   <!-- Suggested Products Section -->
-<section class="suggested-products">
-    <h2>Suggested Products</h2>
-    <div class="suggested-grid">
-        <!-- Example of Suggested Product Card -->
-        <div class="suggested-card">
-            <img src="../images/smartwatch.webp" alt="Smartwatch">
-            <h3>Smartwatch</h3>
-            <p>$150</p>
-            <a href="product-details/smartwatch.html?origin=cart" class="btn">View Details</a>
-        </div>
-        <div class="suggested-card">
-            <img src="../images/Camera.webp" alt="Camera">
-            <h3>Camera</h3>
-            <p>$500</p>
-            <a href="product-details/camera.html?origin=cart" class="btn">View Details</a>
-        </div>
-        <div class="suggested-card">
-            <img src="../images/Headphones.webp" alt="Headphones">
-            <h3>Headphones</h3>
-            <p>$300</p>
-            <a href="product-details/headphones.html?origin=cart" class="btn">View Details</a>
-        </div>
-    </div>
-</section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 ShopLuxe. All Rights Reserved.</p>
     </footer>
 
+    <!-- Include JavaScript -->
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/cart.js"></script>
 </body>
 </html>

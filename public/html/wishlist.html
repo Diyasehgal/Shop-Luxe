@@ -14,11 +14,11 @@
         <nav>
             <div class="logo"><i class="fas fa-store"></i> ShopLuxe</div>
             <ul class="nav-links">
-                <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
                 <li><a href="wishlist.html" class="active"><i class="fas fa-heart"></i> Wishlist</a></li>
                 <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
-                <li><a href="login.html"><i class="fas fa-user"></i> Login/Register</a></li>
+                <li id="auth-link"><a href="login.html"><i class="fas fa-user"></i> Login/Register</a></li>
             </ul>
         </nav>
     </header>
@@ -27,34 +27,7 @@
     <main>
         <h1>Your Wishlist</h1>
         <div class="wishlist-grid">
-            <!-- Example Wishlist Item -->
-            <div class="wishlist-item">
-                <img src="../images/laptop.webp" alt="Laptop">
-                <h3>Laptop</h3>
-                <p>Price: $1000</p>
-                <div class="actions">
-                    <button class="btn">Move to Cart</button>
-                    <button class="btn remove">Remove</button>
-                </div>
-            </div>
-            <div class="wishlist-item">
-                <img src="../images/Headphones.webp" alt="Headphones">
-                <h3>Headphones</h3>
-                <p>Price: $300</p>
-                <div class="actions">
-                    <button class="btn">Move to Cart</button>
-                    <button class="btn remove">Remove</button>
-                </div>
-            </div>
-            <div class="wishlist-item">
-                <img src="../images/Hoodie.webp" alt="Hoodie">
-                <h3>Hoodie</h3>
-                <p>Price: $50</p>
-                <div class="actions">
-                    <button class="btn">Move to Cart</button>
-                    <button class="btn remove">Remove</button>
-                </div>
-            </div>
+            <!-- Wishlist items will be dynamically loaded here -->
         </div>
     </main>
 
@@ -62,5 +35,9 @@
     <footer>
         <p>&copy; 2024 ShopLuxe. All Rights Reserved.</p>
     </footer>
+
+    <!-- Include wishlist.js -->
+    <script src="../js/wishlist.js"></script>
+    <script src="../js/nav.js"></script>
 </body>
 </html>
